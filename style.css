@@ -228,3 +228,32 @@ section {
   gap: 2rem;
   align-items: center;
 }
+
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    flex-direction: row;
+  }
+}
+
+.nav-links a {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 769px) {
+  .nav-links li:last-child a {
+    color: var(--color-very-dark-blue);
+  }
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
