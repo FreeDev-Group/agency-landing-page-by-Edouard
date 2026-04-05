@@ -1,0 +1,259 @@
+/* =========================================================================
+   STYLE CSS - SUNNYSIDE AGENCY 
+   Starting fresh - Issue by Issue
+   ========================================================================= */
+
+:root {
+  --color-soft-red: hsl(7, 99%, 70%);
+  --color-yellow: hsl(51, 100%, 49%);
+  --color-dark-desat-cyan: hsl(167, 40%, 24%);
+  --color-dark-blue: hsl(198, 62%, 26%);
+
+  --color-very-dark-blue: hsl(212, 27%, 19%);
+  --color-very-dark-gray-blue: hsl(213, 9%, 39%);
+  --color-dark-gray-blue: hsl(232, 10%, 55%);
+  --color-gray-blue: hsl(210, 4%, 67%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --font-base: 'Barlow', sans-serif;
+  --font-headings: 'Fraunces', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: 18px;
+  color: var(--color-dark-gray-blue);
+  line-height: 1.6;
+  background-color: var(--color-white);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-headings);
+  color: var(--color-very-dark-blue);
+  font-weight: 900;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: inherit;
+}
+
+/* Hover states */
+a:hover {
+  opacity: 0.7;
+}
+
+button:hover,
+.btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Focus states for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-yellow);
+  outline-offset: 3px;
+}
+
+section {
+  width: 100%;
+}
+
+/* ========================
+   CTA Button Styles
+   ======================== */
+
+.btn {
+  background: var(--color-white);
+  color: var(--color-very-dark-blue);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-family: var(--font-headings);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--color-white);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-very-dark-blue);
+  outline-offset: 3px;
+}
+
+
+
+
+@media (min-width: 769px) {
+  .header {
+    background: var(--color-dark-blue);
+    height: 110px;
+  }
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem; /* Space between text and arrow */
+  padding-bottom: 5vh; /* Optical vertical centering */
+}
+
+@media (min-width: 769px) {
+  .hero-content {
+    gap: 6rem;
+    padding-top: 0;
+  }
+}
+
+/* Navigation Bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.nav.scrolled {
+  background-color: #3ebfff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 769px) {
+  .nav {
+    padding: 2rem 3rem;
+  }
+  .nav.scrolled {
+    padding: 1.2rem 3rem;
+    background-color: rgba(62, 191, 255, 0.95);
+    backdrop-filter: blur(5px);
+  }
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  font-weight: 700;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 769px) {
+  .logo {
+    font-size: 1.8rem;
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 12;
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background-color: var(--color-white);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Navigation Links */
+.nav-links {
+  display: none;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    flex-direction: row;
+  }
+}
+
+.nav-links a {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 769px) {
+  .nav-links li:last-child a {
+    color: var(--color-very-dark-blue);
+  }
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
