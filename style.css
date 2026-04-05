@@ -178,3 +178,53 @@ section {
   text-transform: lowercase;
   letter-spacing: 1px;
 }
+
+@media (min-width: 769px) {
+  .logo {
+    font-size: 1.8rem;
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 12;
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background-color: var(--color-white);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Navigation Links */
+.nav-links {
+  display: none;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
