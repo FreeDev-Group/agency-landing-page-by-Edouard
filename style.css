@@ -18,3 +18,33 @@
   --font-base: 'Barlow', sans-serif;
   --font-headings: 'Fraunces', serif;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: 18px;
+  color: var(--color-dark-gray-blue);
+  line-height: 1.6;
+  background-color: var(--color-white);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-headings);
+  color: var(--color-very-dark-blue);
+  font-weight: 900;
+}
