@@ -82,3 +82,32 @@ button:focus-visible {
 section {
   width: 100%;
 }
+
+/* ========================
+   CTA Button Styles
+   ======================== */
+
+.btn {
+  background: var(--color-white);
+  color: var(--color-very-dark-blue);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-family: var(--font-headings);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--color-white);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-very-dark-blue);
+  outline-offset: 3px;
+}
+
