@@ -111,3 +111,22 @@ section {
   outline-offset: 3px;
 }
 
+
+
+
+@media (min-width: 769px) {
+  .header {
+    background: var(--color-dark-blue);
+    height: 110px;
+  }
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem; /* Space between text and arrow */
+  padding-bottom: 5vh; /* Optical vertical centering */
+}
