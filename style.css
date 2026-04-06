@@ -60,3 +60,207 @@
     padding-top: 0;
   }
 }
+
+/* =========================================
+   ISSUE number  5: SERVICES/FEATURES section
+   ========================================= */
+
+.services {
+  width: 100%;
+  background-color: #f0f4f8; /* Soft blue-gray for the section background */
+  padding: 4rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .services {
+    padding: 6rem 3rem;
+  }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.service-text {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 400px;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media (min-width: 768px) {
+  .service-text {
+    padding: 3rem 10%;
+    align-items: flex-start;
+    text-align: left;
+    min-height: 500px;
+  }
+}
+
+.service-text:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.service-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-very-dark-blue);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.service-text p {
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: var(--color-very-dark-gray-blue);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.btn-learn-more {
+  font-family: var(--font-headings);
+  color: var(--color-very-dark-blue);
+  text-transform: uppercase;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+  padding: 0 0.5rem;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-learn-more::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0.35;
+  transition: all 0.3s ease;
+}
+
+.btn-yellow::after { background-color: var(--color-yellow); }
+.btn-red::after { background-color: var(--color-soft-red); }
+
+.btn-learn-more:hover {
+  padding-left: 0.5rem;
+  transform: scale(1.05);
+}
+
+.btn-learn-more:hover::after {
+  height: 100%;
+  opacity: 1;
+}
+
+.service-image {
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.service-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.service-image:hover picture {
+  transform: scale(1.08);
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* No manual ordering needed when visually separated by cards */
+
+/* Graphic Design & Photography cards */
+.service-card {
+  position: relative;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  padding: 3.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.graphic-design {
+  background-image: url('images/mobile/image-graphic-design.jpg');
+  color: var(--color-dark-desat-cyan);
+}
+
+.photography {
+  background-image: url('images/mobile/image-photography.jpg');
+  color: var(--color-dark-blue);
+}
+
+@media (min-width: 768px) {
+  .graphic-design { background-image: url('images/image-graphic-design.jpg'); }
+  .photography { background-image: url('images/image-photography.jpg'); }
+}
+
+.card-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  font-weight: 900;
+  font-family: var(--font-headings);
+}
+
+.card-content p {
+  max-width: 350px;
+  margin: 0 auto;
+  font-weight: 600;
+  line-height: 1.6;
+  font-size: 1rem;
+}
