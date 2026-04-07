@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,11 +17,11 @@
         <nav class="nav">
             <h1 class="logo">sunnyside</h1>
 
-            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+            <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
-            </button>
+            </div>
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#">About</a></li>
@@ -31,7 +30,154 @@
                 <li><a href="#" class="btn">CONTACT</a></li>
             </ul>
         </nav>
+
+        <div class="overlay" id="overlay"></div>
+
+        <div class="hero-content">
+            <h2>WE ARE CREATIVES</h2>
+            <img src="images/icon-arrow-down.svg" alt="Arrow pointing down" class="arrow-down">
+        </div>
     </header>
+
+    <main>
+
+        <!-- Issue 5: Services Section -->
+        <section id="services" class="services">
+            <div class="services-grid">
+                <div class="service-text service-text-transform">
+                    <h2>Transform your brand</h2>
+                    <p>We are a full-service creative agency specializing in helping brands grow fast. Engage your
+                        clients through compelling visuals that do most of the marketing for you.</p>
+                    <a href="#" class="btn-learn-more btn-yellow">Learn more</a>
+                </div>
+
+                <div class="service-image service-img-transform">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="images/image-transform.jpg">
+                        <img src="images/mobile/image-transform.jpg" alt="Transform your brand - egg picture">
+                    </picture>
+                </div>
+
+                <div class="service-image service-img-standout">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="images/image-stand-out.jpg">
+                        <img src="images/mobile/image-stand-out.jpg"
+                            alt="Stand out to the right audience - glass picture">
+                    </picture>
+                </div>
+
+                <div class="service-text service-text-standout">
+                    <h2>Stand out to the right audience</h2>
+                    <p>Using a collaborative formula of designers, researchers, photographers, videographers, and
+                        copywriters, we'll build and extend your brand in digital places.</p>
+                    <a href="#" class="btn-learn-more btn-red">Learn more</a>
+                </div>
+
+                <!-- Graphic Design & Photography -->
+                <div class="service-card graphic-design">
+                    <div class="card-content">
+                        <h3>Graphic design</h3>
+                        <p>Great design makes you memorable. We deliver artwork that underscores your brand message and
+                            captures potential clients' attention.</p>
+                    </div>
+                </div>
+
+                <div class="service-card photography">
+                    <div class="card-content">
+                        <h3>Photography</h3>
+                        <p>Increase your credibility by getting the most stunning, high-quality photos that improve your
+                            business image.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Issue 7: Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <h2 class="testimonials-title">Client testimonials</h2>
+            <div class="testimonials-grid">
+                <!-- Client 1: Emily -->
+                <article class="testimonial-card">
+                    <img src="images/image-emily.jpg" alt="Photo of Emily R." class="client-photo">
+                    <p class="client-quote">We put our trust in Sunnyside and they delivered, making sure our needs were
+                        met and deadlines were always hit.</p>
+                    <h4 class="client-name">Emily R.</h4>
+                    <p class="client-role">Marketing Director</p>
+                </article>
+
+                <!-- Client 2: Thomas -->
+                <article class="testimonial-card">
+                    <img src="images/image-thomas.jpg" alt="Photo of Thomas S." class="client-photo">
+                    <p class="client-quote">Sunnyside's enthusiasm coupled with their keen interest in our brand's
+                        success made it a satisfying and enjoyable experience.</p>
+                    <h4 class="client-name">Thomas S.</h4>
+                    <p class="client-role">Chief Operating Officer</p>
+                </article>
+
+                <!-- Client 3: Jennie -->
+                <article class="testimonial-card">
+                    <img src="images/image-jennie.jpg" alt="Photo of Jennie F." class="client-photo">
+                    <p class="client-quote">Incredible end result! Our sales increased over 400% when we worked with
+                        Sunnyside. Highly recommended!</p>
+                    <h4 class="client-name">Jennie F.</h4>
+                    <p class="client-role">Business Owner</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery">
+            <div class="gallery-grid">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/image-gallery-milkbottles.jpg">
+                    <img src="images/mobile/image-gallery-milkbottles.jpg" alt="Milk bottles">
+                </picture>
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/image-gallery-orange.jpg">
+                    <img src="images/mobile/image-gallery-orange.jpg" alt="Orange">
+                </picture>
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/image-gallery-cone.jpg">
+                    <img src="images/mobile/image-gallery-cone.jpg" alt="Cone">
+                </picture>
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/image-gallery-sugarcubes.jpg">
+                    <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="Sugar cubes">
+                </picture>
+            </div>
+        </section>
+    </main>
+
+    <!-- Issue 8: Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-logo">
+            <img src="images/logo.svg" alt="Sunnyside Agency Logo">
+        </div>
+
+        <nav class="footer-nav">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+        </nav>
+
+        <div class="footer-socials">
+            <a href="https://facebook.com" aria-label="Visit our Facebook page" target="_blank"
+                rel="noopener noreferrer">
+                <img src="images/icon-facebook.svg" alt="" aria-hidden="true">
+            </a>
+            <a href="https://instagram.com" aria-label="Visit our Instagram page" target="_blank"
+                rel="noopener noreferrer">
+                <img src="images/icon-instagram.svg" alt="" aria-hidden="true">
+            </a>
+            <a href="https://twitter.com" aria-label="Visit our Twitter page" target="_blank" rel="noopener noreferrer">
+                <img src="images/icon-twitter.svg" alt="" aria-hidden="true">
+            </a>
+            <a href="https://pinterest.com" aria-label="Visit our Pinterest page" target="_blank"
+                rel="noopener noreferrer">
+                <img src="images/icon-pinterest.svg" alt="" aria-hidden="true">
+            </a>
+        </div>
+    </footer>
 
 </body>
 
