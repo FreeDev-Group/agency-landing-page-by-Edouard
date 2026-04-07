@@ -1,29 +1,36 @@
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
+const overlay = document.getElementById('overlay');
 
-if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  overlay.classList.toggle('active');
+  hamburger.classList.toggle('active');
+});
 
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
-        });
-    });
-}
+// Fermer en cliquant sur overlay
+overlay.addEventListener('click', () => {
+  navLinks.classList.remove('active');
+  overlay.classList.remove('active');
+  hamburger.classList.remove('active');
+});
 
-// Logic for the navigation bar background change on scroll
+// Fermer le menu mobile en cliquant sur un lien
+const links = navLinks.querySelectorAll('a');
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+    hamburger.classList.remove('active');
+  });
+});
+
+// Gestion du scroll pour le style du menu fixe
 window.addEventListener('scroll', () => {
-    const nav = document.querySelector('.nav');
-    if (nav) {
-        if (window.scrollY > 50) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
-        }
-    }
+  const nav = document.querySelector('.nav');
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
 });
