@@ -74,9 +74,11 @@ button:hover,
 
 /* Focus states for accessibility */
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+.btn:focus-visible {
   outline: 2px solid var(--color-yellow);
   outline-offset: 3px;
+  border-radius: 4px;
 }
 
 section {
@@ -104,6 +106,8 @@ section {
 .btn:hover {
   background: rgba(255, 255, 255, 0.25);
   color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .btn:focus-visible {
@@ -226,13 +230,19 @@ section {
   }
 }
 
-/* Hamburger Menu */
 .hamburger {
   display: flex;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
   z-index: 12;
+  transition: all 0.3s ease;
+}
+
+.hamburger:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 @media (min-width: 768px) {
@@ -290,6 +300,12 @@ section {
   transition: all 0.3s ease;
 }
 
+.nav-links a:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 @media (min-width: 768px) {
   .nav-links a {
     font-size: 1rem;
@@ -313,13 +329,20 @@ section {
     width: calc(100% - 3rem);
     background: var(--color-white);
     flex-direction: column;
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.25rem;
     z-index: 10;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     display: none;
     opacity: 0;
+  }
+
+  @media (min-width: 375px) {
+    .nav-links {
+      padding: 2.5rem 1.5rem;
+      gap: 2rem;
+    }
   }
 
   .nav-links.active {
@@ -504,7 +527,7 @@ section {
   background-color: var(--color-white);
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 480px) {
@@ -525,6 +548,12 @@ section {
 .service-text:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.service-text:focus-visible {
+  outline: 2px solid var(--color-yellow);
+  outline-offset: 4px;
+  border-radius: 20px;
 }
 
 .service-text h2 {
@@ -606,6 +635,12 @@ section {
   transform: scale(1.05);
 }
 
+.btn-learn-more:focus-visible {
+  outline: 2px solid var(--color-very-dark-blue);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 .btn-learn-more:hover::after {
   height: 100%;
   opacity: 1;
@@ -615,7 +650,7 @@ section {
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s ease;
   aspect-ratio: 1 / 1;
 }
 
@@ -628,6 +663,12 @@ section {
 .service-image:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.service-image:focus-visible {
+  outline: 2px solid var(--color-yellow);
+  outline-offset: 4px;
+  border-radius: 20px;
 }
 
 .service-image picture {
@@ -664,7 +705,7 @@ section {
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 480px) {
@@ -684,6 +725,12 @@ section {
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.service-card:focus-visible {
+  outline: 2px solid var(--color-yellow);
+  outline-offset: 4px;
+  border-radius: 20px;
 }
 
 .card-content {
@@ -844,7 +891,7 @@ section {
   flex-direction: column;
   align-items: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s ease;
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.03);
 }
@@ -865,6 +912,12 @@ section {
   transform: translateY(-15px);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
   border-color: #3ebfff;
+}
+
+.testimonial-card:focus-visible {
+  outline: 2px solid var(--color-yellow);
+  outline-offset: 4px;
+  border-radius: 24px;
 }
 
 /* Decorative Quotation Marks */
@@ -1042,7 +1095,7 @@ section {
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0,0,0,0.06);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s ease;
   cursor: pointer;
   position: relative;
   background-color: var(--color-white);
@@ -1053,6 +1106,12 @@ section {
   transform: translateY(-15px) rotate(2deg);
   box-shadow: 0 30px 60px rgba(0,0,0,0.12);
   z-index: 10;
+}
+
+.gallery-grid picture:focus-visible {
+  outline: 2px solid var(--color-yellow);
+  outline-offset: 4px;
+  border-radius: 24px;
 }
 
 .gallery-grid picture:nth-child(even):hover {
@@ -1087,7 +1146,7 @@ section {
   font-weight: 900;
   letter-spacing: 2px;
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease;
   pointer-events: none;
   text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
@@ -1178,6 +1237,12 @@ section {
   filter: invert(36%) sepia(18%) saturate(1454%) hue-rotate(120deg) brightness(100%) contrast(90%);
 }
 
+.footer-logo img:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
 .footer-nav {
   margin-bottom: 2rem;
   display: flex;
@@ -1263,6 +1328,10 @@ section {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-3px);
 }
 
 .footer-socials a:focus-visible {
