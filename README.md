@@ -43,7 +43,7 @@ Users should be able to:
 
 ## Links
 
-- Live Site URL: https://freedev-group.github.io/agency-landing-page-by-Arnold/
+- Live Site URL: coming soon
 - Repository URL: https://github.com/FreeDev-Group/agency-landing-page-by-Edouard
 
 ---
