@@ -33,18 +33,18 @@ Users should be able to:
 
 ## Screenshot Desktop
 
-![Project Screenshot solution project](./Screenshot-desktop.png)
+![alt text](Screenshot-desktop.png)
 
 ## Screenshot Mobile
 
-![Project Screenshot solution project](./Screenshot-mobile.png)
+![alt text](Screenshot-mobile.png)
 
 ---
 
 ## Links
 
 - Live Site URL: https://freedev-group.github.io/agency-landing-page-by-Arnold/
-- Repository URL: https://github.com/FreeDev-Group/agency-landing-page-by-Arnold
+- Repository URL: https://github.com/FreeDev-Group/agency-landing-page-by-Edouard
 
 ---
 
@@ -132,9 +132,11 @@ In future improvements, we would like to:
 ## Authors
 
 - Built with collaboration and teamwork
-- https://github.com/Mugisho-dev-metasploit
-- https://github.com/ElGautinho
-- https://github.com/arnold722
+
+  https://github.com/ElGautinho
+  https://github.com/edouardkne
+  https://github.com/Mugisho-dev-metasploit
+  https://github.com/arnold722
 
 ---
 
@@ -142,6 +144,7 @@ In future improvements, we would like to:
 
 1. Clone this repository  
 2. Open `index.html` in your browser  
+
 
 ## Acknowledgments
 
